@@ -17,6 +17,8 @@ const config: Config = {
         nav: '#fafaf9',
         contactbtn: '#262626',
         offwhitetxt: '#e8e8e3',
+        darkgrey: '#8c8c73',
+        secondarytxt: '#aeae9d',
       }
     },
   },

@@ -11,23 +11,43 @@ const Cabinet = localFont({
 
 const Nav = () => {
     return (
-        <nav className='flex justify-between bg-nav p-4 align-items'>
+        <nav className='flex justify-between bg-nav px-5 py-3 align-items items-center'>
             <Link to='home' smooth>
                 <h1 className={generalSans.className}>Arek</h1>
             </Link>
-            <div className='flex items-center space-x-4'>
+            <div className='flex items-center space-x-7'>
                 <Link to='about' smooth>
-                    <h2 className={Cabinet.className}>about</h2>
+                    <span className={Cabinet.className + ' relative inline-block'}>
+                        <span className='relative z-10 group text-[17.6px]'>
+                            about
+                            <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
+                        </span>                        
+                    </span>
                 </Link>
                 <Link to='skills' smooth>
-                    <h2 className={Cabinet.className}>skills</h2>
+                    <span className={Cabinet.className + ' relative inline-block'}>
+                        <span className='relative z-10 group text-[17.6px]'>
+                            skills
+                            <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
+                        </span> 
+                    </span>
                 </Link>
                 <Link to='projects' smooth>
-                    <h2 className={Cabinet.className}>projects</h2>
+                    <span className={Cabinet.className + ' relative inline-block'}>
+                        <span className='relative z-10 group text-[17.6px]'>
+                            projects
+                            <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
+                        </span>                       
+                    </span>
                 </Link>
                 <div className='p-2.5 bg-contactbtn rounded-full'>
                     <Link to='contact' smooth>
-                        <h2 className={Cabinet.className + ' text-offwhitetxt'}>contact</h2>
+                        <span className={Cabinet.className + ' text-offwhitetxt relative inline-block'}>
+                            <span className='relative z-10 group text-[17.6px]'>
+                                contact me
+                                <span className='absolute inset-x-0 top-1/2 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
+                            </span>
+                        </span>
                     </Link>
                 </div>
             </div>
