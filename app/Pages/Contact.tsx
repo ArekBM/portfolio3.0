@@ -58,7 +58,7 @@ const Contact = () => {
         >
             <div className='section-heading select-none'>
                 <div className='heading flex items-center justify-center space-x-[3%]'>
-                    <h2 className={generalSans.className + ' w-fit text-5xl sm:text-heading-2 font-medium uppercase text-darkgrey'}>CONTACT</h2>
+                    <h2 className={Cabinet.className + ' w-fit text-5xl sm:text-heading-2 font-medium uppercase text-darkgrey'}>CONTACT</h2>
                 </div>
 
             </div>

@@ -1,11 +1,24 @@
+import localFont from 'next/font/local'
+
+const generalSans = localFont({
+    src: '../styles/fonts/GeneralSans-Bold.woff2'
+})
+
+const Cabinet = localFont({
+    src: '../styles/fonts/CabinetGrotesk-Regular.woff2'
+})
+
 const About = () => {
+
     return (
-        <div
+        <section
             id='about'
-            className='min-h-screen flex items-center justify-center relative'
-        >
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+            className={`select-none flex my-20 md:my-[12%] py-10 flex-col items-center justify-center overflow-hidden px-10 md:px-5 xl:px-20 2xl:px-28`}
+        >   
+            <div className='flex w-full items-center space-x-20'>
+                <h1 className={generalSans.className + ' text-6xl font-medium text-offwhitetxt leading-[1.25em] md:leading-[1.08em]'}>I create elevating digital experiences that inspire and connect with people through development and design.</h1>
+            </div>
+        </section>
     )
 }
 
