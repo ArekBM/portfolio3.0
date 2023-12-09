@@ -5,6 +5,7 @@ import Nav from '@/app/(components)/Nav'
 import Contact from '@/app/Pages/Contact'
 import About from '@/app/Pages/About'
 import './globals.css'
+import Projects from './Pages/Projects'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className='flex flex-col h-screen max-h-screen'>
           <Nav />
           <About />
+          <Projects />
           <Contact />
         </div>
       </body>

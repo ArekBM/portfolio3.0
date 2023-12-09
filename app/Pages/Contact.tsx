@@ -1,6 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import localFont from 'next/font/local'
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import HomeIcon from '@mui/icons-material/Home';
 
 const generalSans = localFont({
     src: '../styles/fonts/GeneralSans-Bold.woff2'
@@ -48,10 +52,16 @@ const Contact = () => {
     const formattedTime = currentTime.toLocaleTimeString()
 
     return (
-        <div
+        <section
             id='contact'
             className='min-h-screen w-full'
         >
+            <div className='section-heading select-none'>
+                <div className='heading flex items-center justify-center space-x-[3%]'>
+                    <h2 className={generalSans.className + ' w-fit text-5xl sm:text-heading-2 font-medium uppercase text-darkgrey'}>CONTACT</h2>
+                </div>
+
+            </div>
             <div className='flex items-center justify-center relative'>
                 <div className='w-2/3 flex flex-col p-10'>
                     <h1 className={generalSans.className}>Lorem Ipsum dolor sit amet.</h1>
@@ -87,21 +97,33 @@ const Contact = () => {
                 <div className='w-1/3 flex flex-col gap-20'>
                     <div id='email' className='flex flex-col gap-2'>
                         <h4 className={generalSans.className}>Contact Details</h4>
-                        <p className={Cabinet.className}>eric.bmiyake@gmail.com</p>
+                        <div className='flex flex-row gap-2'>
+                            <EmailIcon />
+                            <p className={Cabinet.className}>eric.bmiyake@gmail.com</p>
+                        </div>
                     </div>
                     <div id='links' className='flex flex-col gap-2'>
-                        <h4 className={generalSans.className}>My Digital Spaces</h4>
-                        <p className={Cabinet.className}>Github</p>
-                        <p className={Cabinet.className}>LinkedIn</p>
+                        <h4 className={generalSans.className}>My Socials</h4>
+                        <div className='flex flex-row gap-2'>
+                            <GitHubIcon />
+                            <a href='https://github.com/ArekBM' target='_blank'><span className={Cabinet.className}>Github</span></a>
+                        </div>
+                        <div className='flex flex-row gap-2'>
+                            <LinkedInIcon />
+                            <a href='https://linkedin.com/in/emiyake' target='_blank'><span className={Cabinet.className}>LinkedIn</span></a>
+                        </div>
                     </div>
                     <div id='location' className='flex flex-col gap-2'>
                         <h3 className={generalSans.className}>Location</h3>
-                        <p className={Cabinet.className}>San Francisco, CA USA</p>
+                        <div className='flex flex-row gap-2'>
+                            {/* <HomeIcon /> */}
+                            <p className={Cabinet.className}>San Francisco, CA USA</p>
+                        </div>
                         <p className={Cabinet.className}>{formattedTime}</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
