@@ -8,7 +8,7 @@ import './globals.css'
 import Projects from './Pages/Projects'
 import { useRef, useState, useEffect } from 'react'
 import Skills from './Pages/Skills'
-
+import Hero from './Pages/Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,6 +55,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
       <body className={inter.className}>
         <div className='flex flex-col h-screen max-h-screen'>
           <div className={`${bgColor} transition-all duration-500 ease-in-out`}>
+            <Hero />
             <Nav isInSection={isInSection} />
             <div ref={section1ref}>
               <About />

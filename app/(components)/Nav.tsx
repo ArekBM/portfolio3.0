@@ -21,7 +21,7 @@ const Nav = ({isInSection} : any) => {
             <Link to='home' smooth>
                 <h1 className={generalSans.className + `relative z-10 group text-[17.6px] ${txtColor}`}>Arek</h1>
             </Link>
-            <nav className='space-x-7 text-body-3 sm:block'>
+            <nav className='space-x-7 sm:block'>
                 <div className='flex items-center space-x-7'>
                     <Link to='about' smooth>
                         <span className={Cabinet.className + ' relative inline-block'}>
