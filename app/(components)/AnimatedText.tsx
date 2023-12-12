@@ -31,20 +31,21 @@ const AnimatedText = ({ text, className, el: Wrapper = 'h1', transitiondelay } :
         >
             <span className='sr-only'>{text}</span>
             <motion.span ref={ref} initial='hidden' animate={isInView ? 'visible' : 'hidden '} transition={{ staggerChildren: 0.1 }} aria-hidden>
-                {textArray.map((line) => (
-                    <span className='block'>
-                        {line.split(' ').map((word) => (
-                            <span className='inline-block'>
-                                {word.split('').map((char) => (
+                {textArray.map((line, i) => (
+                    <span className='block' key={i + 1}>
+                        {line.split(' ').map((word, j) => (
+                            <span className='inline-block' key={j + 1}>
+                                {word.split('').map((char, k) => (
                                     <motion.span 
                                         className='inline-block' 
                                         variants={defaultAnimations} 
                                         transition={{ delay: transitiondelay, duration: 1 }}
+                                        key={k + 1}
                                     >
                                         {char}
                                     </motion.span>
                                 ))}
-                                <span className='inline-block'>&nbsp;</span>
+                                <span className='inline-block' key={j - 1}>&nbsp;</span>
                             </span>
                         ))}
                     </span>
