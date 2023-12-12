@@ -9,6 +9,7 @@ import Projects from './Pages/Projects'
 import { useRef, useState, useEffect } from 'react'
 import Skills from './Pages/Skills'
 import Hero from './Pages/Hero'
+import { motion } from 'framer-motion'
 
 
 
@@ -17,6 +18,19 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
   const section1ref = useRef(null)
   const section2ref = useRef(null);
   const [isInSection, setIsInSection] = useState(false);
+
+  const [ mousePosition, setMousePosition ] = useState({ x: 0, y: 0})
+
+  const updateMousePosition = (e : any) => {
+    setMousePosition({ x: e.clientX, y: e.clientY })
+  }
+
+  useEffect(() => {
+    window.addEventListener('mousemove', updateMousePosition)
+    return () => {
+      window.removeEventListener('mousemove', updateMousePosition)
+    }
+  })
 
   useEffect(() => {
     const options = {
@@ -49,9 +63,13 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   const bgColor = isInSection ? 'bg-offblack' : 'bg-nav';
 
+  const { x, y } = mousePosition
+
   return (
     <html lang="en">
       <body>
+        <div className='cursordot' style={{ left: x, top : y }}>
+        </div>
         <div className='flex flex-col h-screen max-h-screen'>
           <div className={`${bgColor} transition-all duration-500 ease-in-out`}>
             <Hero />
