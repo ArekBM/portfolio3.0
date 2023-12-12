@@ -84,7 +84,9 @@ const Projects = ()  => {
                     </div>
                 </div>
                 <div className='col-span-1 pt-0 md:col-span-5 md:pt-80'>
-                    <img className='w-screen duration-700 ease-in-out hover:scale-105 hover:rounded-3xl' src='./dalle.png' alt='right picture' width='800' height='600' onMouseEnter={handleHover} onMouseLeave={handleExit} ></img>
+                    <a href='https://main.d2nibnnfhe4wtq.amplifyapp.com/' target='_blank'>
+                        <img className='w-screen duration-700 ease-in-out hover:scale-105 hover:rounded-3xl' src='./dalle.png' alt='right picture' width='800' height='600' onMouseEnter={handleHover} onMouseLeave={handleExit} ></img>
+                    </a>
                     <div className='mt-4'>
                         <div className='flex space-x-2 mb-3'>
                             <p className='rounded-full bg-transparent border border-darkgrey flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>2023</p>
