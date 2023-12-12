@@ -22,13 +22,13 @@ const Nav = ({isInSection} : any) => {
                 <h1 className={generalSans.className + `relative z-10 group text-[17.6px] ${txtColor}`}>EM</h1>
             </Link>
             <nav className='space-x-7 sm:block'>
-                <div className='flex items-center space-x-7'>
+                <div className='flex items-center justify-content space-x-7'>
                     <Link to='about' smooth>
-                        <span className={Cabinet.className + ' relative inline-block'}>
+                    <span className={Cabinet.className + ' relative inline-block'}>
                             <span className={`relative z-10 group text-[17.6px] ${txtColor}`}>
                                 about
                                 <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
-                            </span>                        
+                            </span> 
                         </span>
                     </Link>
                     <Link to='skills' smooth>

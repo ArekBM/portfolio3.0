@@ -36,10 +36,9 @@ body {
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 1;
   position: fixed;
   background-color: #8c8c73;
-  z-index: 999;
+  z-index: 998;
   pointer-events: none;
 }
 
@@ -50,3 +49,20 @@ textarea{
 input{
   cursor: none;
 }
+
+a{
+  cursor: none;
+}
+
+.cursordotlinks {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  background-color: #8c8c73;
+  border-radius: 50%;
+  pointer-events: none;
+  cursor: none;
+  z-index: 999; /* Ensure the div is on top of other elements */
+}
+

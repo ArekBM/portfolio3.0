@@ -74,20 +74,20 @@ const Contact = () => {
                     <form ref={form} onSubmit={sendEmail}>
                         <div className='grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2'>
                             <div className='relative z-0'>
-                                <input className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0'type='text' placeholder='' required></input>
-                                <label htmlFor='name' className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondarytxt duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75'>your name</label>
+                                <input className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0' type='text' placeholder='' name='Name' required></input>
+                                <label htmlFor='Name' className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondarytxt duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75'>your name</label>
                             </div>
                             <div className='relative z-0'>
-                                <input className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0' type='text' placeholder='' required></input>
-                                <label htmlFor='youremail' className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondarytxt duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75'>your email</label>
+                                <input className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0' type='text' placeholder='' name='Email' required></input>
+                                <label htmlFor='Email' className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondarytxt duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75'>your email</label>
                             </div>
                             <div className='relative z-0 sm:col-span-2'>
-                                <textarea className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0 resize-none' rows={5} placeholder=''></textarea>
-                                <label htmlFor='message' className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondarytxt duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75'>your message</label>
+                                <textarea className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0 resize-none' rows={5} name='Message' placeholder=''></textarea>
+                                <label htmlFor='Message' className='absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondarytxt duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75'>your message</label>
                             </div>
                         </div>
                         <br/>
-                        <button type='submit'>
+                        <button>
                             <span className='p-2.5 bg-contactbtn rounded-full'>
                                 <span className={Cabinet.className + ' text-offwhitetxt relative inline-block'}>
                                     <span className='relative z-10 group text-[17.6px]'>
@@ -111,11 +111,11 @@ const Contact = () => {
                         <h4 className={generalSans.className}>My Socials</h4>
                         <div className='flex flex-row gap-2'>
                             <GitHubIcon />
-                            <a href='https://github.com/ArekBM' target='_blank'><span className={Cabinet.className}>Github</span></a>
+                            <a href='https://github.com/ArekBM' target='_blank'><span className={Cabinet.className + ' relative inline-block'}><span className='relative z-10 group'>Github<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
                         </div>
                         <div className='flex flex-row gap-2'>
                             <LinkedInIcon />
-                            <a href='https://linkedin.com/in/emiyake' target='_blank'><span className={Cabinet.className}>LinkedIn</span></a>
+                            <a href='https://linkedin.com/in/emiyake' target='_blank'><span className={Cabinet.className + ' relative inline-block'}><span className='relative z-10 group'>LinkedIn<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
                         </div>
                     </div>
                     <div id='location' className='flex flex-col gap-2'>
