@@ -19,7 +19,9 @@ const config: Config = {
         offwhitetxt: '#e8e8e3',
         darkgrey: '#8c8c73',
         secondarytxt: '#aeae9d',
-        offblack: '#0e0e0c'
+        offblack: '#0e0e0c',
+        offblacktxt: '#262626',
+        abouttxt: '#d1d1c7'
       }
     },
   },

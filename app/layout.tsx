@@ -10,7 +10,6 @@ import { useRef, useState, useEffect } from 'react'
 import Skills from './Pages/Skills'
 import Hero from './Pages/Hero'
 
-const inter = Inter({ subsets: ['latin'] })
 
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {
@@ -52,7 +51,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <div className='flex flex-col h-screen max-h-screen'>
           <div className={`${bgColor} transition-all duration-500 ease-in-out`}>
             <Hero />

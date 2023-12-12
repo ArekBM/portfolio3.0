@@ -19,7 +19,7 @@ const Nav = ({isInSection} : any) => {
     return (
         <header className={`fixed top-0 z-50 flex w-full -translate-y-1 items-center justify-between ${bgColor} px-5 py-3 transition-all duration-500 ease-in-out`}>
             <Link to='home' smooth>
-                <h1 className={generalSans.className + `relative z-10 group text-[17.6px] ${txtColor}`}>Arek</h1>
+                <h1 className={generalSans.className + `relative z-10 group text-[17.6px] ${txtColor}`}>EM</h1>
             </Link>
             <nav className='space-x-7 sm:block'>
                 <div className='flex items-center space-x-7'>

@@ -1,4 +1,5 @@
 import localFont from 'next/font/local'
+import AnimatedText from '../(components)/AnimatedText'
 
 const generalSans = localFont({
     src: '../styles/fonts/GeneralSans-Bold.woff2'
@@ -8,12 +9,22 @@ const Cabinet = localFont({
     src: '../styles/fonts/CabinetGrotesk-Regular.woff2'
 })
 
+const generalVar = localFont({
+    src: '../styles/fonts/GeneralSans-Variable.woff2'
+})
+
 const Projects = ()  => {
     return (
         <section
             id='projects'
             className='px-10 md:px-5 xl:px-20 2xl:px-28'
         >
+            <div className='section-heading select-none'>
+                <div className='heading flex items-center justify-center space-x-[3%]'>
+                    <AnimatedText className={generalVar.className + ' w-fit font-medium uppercase text-darkgrey text-9xl'} text={'Projects'} transitiondelay={.5} />
+                </div>
+
+            </div>
             <div className='mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12'>
                 <div className='col-span-1 md:col-span-12'>
                     HERO IMG
@@ -22,8 +33,8 @@ const Projects = ()  => {
                     <img className='w-screen duration-700 ease-in-out hover:scale-105 hover:rounded-3xl' src='./ticket-me.png' alt='left picture' width='800' height='600'></img>
                     <div className='mt-4'>
                         <div className='flex space-x-2 mb-3'>
-                            <p className='rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>2023</p>
-                            <p className='rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>Next.js • MongoDB • TailwindCSS • Typescript</p>
+                            <p className='rounded-full bg-transparent border border-darkgrey flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>2023</p>
+                            <p className='rounded-full bg-transparent border border-darkgrey flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>Next.js • MongoDB • TailwindCSS • Typescript</p>
                         </div>
                         <div className='2xl:space-y-3'>
                             <h3 className=' 2xl:text-5xl font-medium uppercase text-secondarytxt'>ticket me app</h3>
@@ -35,8 +46,8 @@ const Projects = ()  => {
                     <img className='w-screen duration-700 ease-in-out hover:scale-105 hover:rounded-3xl' src='./dalle.png' alt='right picture' width='800' height='600'></img>
                     <div className='mt-4'>
                         <div className='flex space-x-2 mb-3'>
-                            <p className='rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>2023</p>
-                            <p className='rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>Next.js • AWS • TailwindCSS • Typescript • Supabase</p>
+                            <p className='rounded-full bg-transparent border border-darkgrey flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>2023</p>
+                            <p className='rounded-full bg-transparent border border-darkgrey flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>Next.js • AWS • TailwindCSS • Typescript</p>
                         </div>
                     </div>
                     <div className='2xl:space-y-3'>

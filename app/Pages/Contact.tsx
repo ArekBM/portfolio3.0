@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
+import AnimatedText from '../(components)/AnimatedText';
 
 const generalSans = localFont({
     src: '../styles/fonts/GeneralSans-Bold.woff2'
@@ -12,6 +13,10 @@ const generalSans = localFont({
 
 const Cabinet = localFont({
     src: '../styles/fonts/CabinetGrotesk-Regular.woff2'
+})
+
+const generalVar = localFont({
+    src: '../styles/fonts/GeneralSans-Variable.woff2'
 })
 
 const Contact = () => {
@@ -58,7 +63,7 @@ const Contact = () => {
         >
             <div className='section-heading select-none'>
                 <div className='heading flex items-center justify-center space-x-[3%]'>
-                    <h2 className={Cabinet.className + ' w-fit text-5xl sm:text-heading-2 font-medium uppercase text-darkgrey'}>CONTACT</h2>
+                    <AnimatedText className={generalVar.className + ' w-fit text-9xl font-medium uppercase text-darkgrey'} text={'CONTACT'} transitiondelay={.5} />
                 </div>
 
             </div>
