@@ -59,19 +59,19 @@ const Contact = () => {
     return (
         <section
             id='contact'
-            className='min-h-screen w-full'
+            className='my-[10%]'
         >
             <div className='section-heading select-none'>
                 <div className='heading flex items-center justify-center space-x-[3%]'>
-                    <AnimatedText className={generalVar.className + ' w-fit text-9xl font-medium uppercase text-darkgrey'} text={'CONTACT'} transitiondelay={.5} />
+                    <AnimatedText className={generalVar.className + ' w-fit text-9xl sm:text-heading-2 font-medium uppercase text-darkgrey'} text={'CONTACT'} transitiondelay={.5} />
                 </div>
 
             </div>
-            <div className='flex items-center justify-center relative'>
-                <div className='w-2/3 flex flex-col p-10'>
-                    <h1 className={generalSans.className}>Lorem Ipsum dolor sit amet.</h1>
-                    <p className={Cabinet.className}>Lorem ipsum dolor sit amet. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <form ref={form} onSubmit={sendEmail}>
+            <div className='mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12'>
+                <div className='col-span-4'>
+                    <h1 className={generalSans.className + ' max-w-lg 2xl:max-w-3xl text-heading-3 2xl:text-7xl font-semibold leading-tight'}>Open to all opportunities  and chess game challenges </h1>
+                    <p className={Cabinet.className + ' mt-4 max-w-md 2xl:max-w-2xl text-body-2 2xl:text-4xl'}>Over my career I have learned how to get things done, keep my cool in dire moments, work with lots of different types of people, and take initiative to pick up slack when needed.</p>
+                    <form ref={form} onSubmit={sendEmail} className='mt-10'>
                         <div className='grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2'>
                             <div className='relative z-0'>
                                 <input className='peer block w-full appearance-none border-0 border-b border-darkgrey bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0' type='text' placeholder='' name='Name' required></input>
@@ -99,32 +99,32 @@ const Contact = () => {
                         </button>
                     </form>
                 </div>
-                <div className='w-1/3 flex flex-col gap-20'>
+                <div className='col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1'>
                     <div id='email' className='flex flex-col gap-2'>
-                        <h4 className={generalSans.className}>Contact Details</h4>
+                        <h4 className={generalVar.className + ' text-body-1 2xl:text-4xl font-semibold'}>Contact Details</h4>
                         <div className='flex flex-row gap-2'>
                             <EmailIcon />
-                            <p className={Cabinet.className}>eric.bmiyake@gmail.com</p>
+                            <p className={generalVar.className + ' text-body-2'}>eric.bmiyake@gmail.com</p>
                         </div>
                     </div>
                     <div id='links' className='flex flex-col gap-2'>
-                        <h4 className={generalSans.className}>My Socials</h4>
+                        <h4 className={generalVar.className + ' text-body-1 2xl:text-4xl font-semibold'}>My Socials</h4>
                         <div className='flex flex-row gap-2'>
                             <GitHubIcon />
-                            <a href='https://github.com/ArekBM' target='_blank'><span className={Cabinet.className + ' relative inline-block'}><span className='relative z-10 group'>Github<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
+                            <a href='https://github.com/ArekBM' target='_blank'><span className={generalVar.className + ' relative inline-block '}><span className='text-body-2 relative z-10 group'>Github<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
                         </div>
                         <div className='flex flex-row gap-2'>
                             <LinkedInIcon />
-                            <a href='https://linkedin.com/in/emiyake' target='_blank'><span className={Cabinet.className + ' relative inline-block'}><span className='relative z-10 group'>LinkedIn<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
+                            <a href='https://linkedin.com/in/emiyake' target='_blank'><span className={generalVar.className + ' relative inline-block'}><span className='text-body-2 relative z-10 group'>LinkedIn<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
                         </div>
                     </div>
                     <div id='location' className='flex flex-col gap-2'>
-                        <h3 className={generalSans.className}>Location</h3>
+                        <h3 className={generalSans.className + ' text-body-1 2xl:text-4xl font-semibold'}>Location</h3>
                         <div className='flex flex-row gap-2'>
                             {/* <HomeIcon /> */}
-                            <p className={Cabinet.className}>San Francisco, CA USA</p>
+                            <p className={Cabinet.className + ' text-body-2'}>San Francisco, CA USA</p>
                         </div>
-                        <p className={Cabinet.className}>{formattedTime}</p>
+                        <p className={Cabinet.className + ' text-body-2'}>{formattedTime}</p>
                     </div>
                 </div>
             </div>

@@ -12,11 +12,11 @@ import Hero from './Pages/Hero'
 import { motion } from 'framer-motion'
 
 
-
 export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   const section1ref = useRef(null)
   const section2ref = useRef(null);
+  const section3ref = useRef(null)
   const [isInSection, setIsInSection] = useState(false);
   const [ mousePosition, setMousePosition ] = useState({ x: 0, y: 0})
 
@@ -53,6 +53,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
     if (section2ref.current) {
       observer.observe(section2ref.current)
     }
+
 
     return () => {
       observer.disconnect();

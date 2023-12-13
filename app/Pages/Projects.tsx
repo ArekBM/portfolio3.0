@@ -51,7 +51,7 @@ const Projects = ()  => {
     return (
         <section
             id='projects'
-            className='px-10 md:px-5 xl:px-20 2xl:px-28'
+            className='my-[10%]'
         >
             <motion.div ref={scope} className='cursordotlinks group relative' style={{ left: x, top : y}} >
                 <motion.div ref={arrowScope} style={{ opacity: 0}}>
@@ -66,7 +66,7 @@ const Projects = ()  => {
             </div>
             <div className='mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12'>
                 <div className='col-span-1 md:col-span-12'>
-                    HERO IMG
+                   {/* Hero Img */}
                 </div>
                 <div className='col-span-1 pt-0 md:col-span-7 md:pt-16'>
                     <a href='https://ticketme-arekbm.vercel.app/' target='_blank'>
@@ -78,8 +78,8 @@ const Projects = ()  => {
                             <p className='rounded-full bg-transparent border border-darkgrey flex justify-center items-center px-4 py-1 text-secondarytxt text-body-4 2xl:text-3xl'>Next.js • MongoDB • TailwindCSS • Typescript</p>
                         </div>
                         <div className='2xl:space-y-3'>
-                            <h3 className=' 2xl:text-5xl font-medium uppercase text-secondarytxt'>ticket me app</h3>
-                            <p className={Cabinet.className + ' 2xl:text-4xl text-secondarytxt'}>Full stack application utilizing MongoDB and RESTFUL API architecture</p>
+                            <h3 className={generalVar.className + ' text-work-title 2xl:text-5xl font-medium uppercase text-offwhitetxt'}>ticket me app</h3>
+                            <p className={Cabinet.className + ' text-body-2 2xl:text-4xl text-stone'}>Full stack application utilizing MongoDB and RESTFUL API architecture</p>
                         </div>
                     </div>
                 </div>
@@ -94,8 +94,8 @@ const Projects = ()  => {
                         </div>
                     </div>
                     <div className='2xl:space-y-3'>
-                        <h3 className=' 2xl:text-5xl font-medium uppercase text-secondarytxt'>thumbnail AI</h3>
-                        <p className={Cabinet.className + ' 2xl:text-4xl text-secondarytxt'}>Full stack application hosted on AWS with Stripe integration. Also utilizes tRPC and NextAuth.js </p>
+                        <h3 className={generalVar + ' text-work-title 2xl:text-5xl font-medium uppercase text-offwhitetxt'}>thumbnail AI</h3>
+                        <p className={Cabinet.className + ' text-body-2 2xl:text-4xl text-stone'}>Full stack application hosted on AWS with Stripe integration. Also utilizes tRPC and NextAuth.js </p>
                     </div>
                 </div>
             </div>

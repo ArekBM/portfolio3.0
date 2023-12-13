@@ -21,7 +21,8 @@ const config: Config = {
         secondarytxt: '#aeae9d',
         offblack: '#0e0e0c',
         offblacktxt: '#262626',
-        abouttxt: '#d1d1c7'
+        abouttxt: '#d1d1c7',
+        stone: '#d9d9d9',
       }
     },
   },

@@ -25,7 +25,7 @@ const Nav = ({isInSection} : any) => {
                 <div className='flex items-center justify-content space-x-7'>
                     <Link to='about' smooth>
                     <span className={Cabinet.className + ' relative inline-block'}>
-                            <span className={`relative z-10 group text-[17.6px] ${txtColor}`}>
+                            <span className={`text-body-3 relative z-10 group ${txtColor}`}>
                                 about
                                 <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
                             </span> 
@@ -33,7 +33,7 @@ const Nav = ({isInSection} : any) => {
                     </Link>
                     <Link to='skills' smooth>
                         <span className={Cabinet.className + ' relative inline-block'}>
-                            <span className={`relative z-10 group text-[17.6px] ${txtColor}`}>
+                            <span className={`text-body-3 relative z-10 group ${txtColor}`}>
                                 skills
                                 <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
                             </span> 
@@ -41,7 +41,7 @@ const Nav = ({isInSection} : any) => {
                     </Link>
                     <Link to='projects' smooth>
                         <span className={Cabinet.className + ' relative inline-block'}>
-                            <span className={`relative z-10 group text-[17.6px] ${txtColor}`}>
+                            <span className={`text-body-3 relative z-10 group ${txtColor}`}>
                                 projects
                                 <span className='absolute inset-x-0 bottom-0 h-1 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span>
                             </span>                       

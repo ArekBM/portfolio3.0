@@ -66,3 +66,34 @@ a{
   z-index: 999; /* Ensure the div is on top of other elements */
 }
 
+.text-work-title {
+  font-size: clamp(1.25rem,2vw,1.5rem)
+}
+
+.text-body-1 {
+  font-size: clamp(1.1rem,2vw,1.3rem)
+}
+
+.text-body-2 {
+  font-size: clamp(1rem,1.5vw,1.5rem)
+}
+
+.text-body-3 {
+  font-size: 1.1rem
+}
+
+.text-heading-1 {
+  font-size: clamp(2.5rem,6.5vw,10rem)
+}
+
+.text-heading-2 {
+  font-size: clamp(2.4rem,8vw,10rem)
+}
+
+.text-heading-3 {
+  font-size: clamp(2rem,5vw,2.75rem)
+}
+
+.text-special {
+  font-size: clamp(2rem,4vw,3.25rem)
+}
