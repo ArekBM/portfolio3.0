@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
 import AnimatedText from '../(components)/AnimatedText';
+import ArticleIcon from '@mui/icons-material/Article';
 
 const generalSans = localFont({
     src: '../styles/fonts/GeneralSans-Bold.woff2'
@@ -105,6 +106,10 @@ const Contact = () => {
                         <div className='flex flex-row gap-2'>
                             <EmailIcon />
                             <p className={generalVar.className + ' text-body-2'}>eric.bmiyake@gmail.com</p>
+                        </div>
+                        <div className='flex flex-row gap-2'>
+                            <ArticleIcon />
+                            <a href='https://emiyake.netlify.app/assets/sweRes-542262cb.pdf' target='_blank'><span className='relative inline-block'><span className={generalVar.className + ' text-body-2 relative z-10 group'}>Resume<span className='absolute inset-x-0 h-1 bottom-0 bg-darkgrey w-full transform origin-left scale-x-0 transition-transform duration-300 ease-in-out rounded-full group-hover:scale-x-100'></span></span></span></a>
                         </div>
                     </div>
                     <div id='links' className='flex flex-col gap-2'>
