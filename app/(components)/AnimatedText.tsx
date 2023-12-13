@@ -6,6 +6,7 @@ type animatedTextProps = {
     el?: keyof JSX.IntrinsicElements
     className?: string
     transitiondelay?: number
+    transitionduration?: number
 }
 
 const defaultAnimations = {
@@ -19,7 +20,7 @@ const defaultAnimations = {
     },
 }
 
-const AnimatedText = ({ text, className, el: Wrapper = 'h1', transitiondelay } : animatedTextProps ) => {
+const AnimatedText = ({ text, className, el: Wrapper = 'h1', transitiondelay, transitionduration } : animatedTextProps ) => {
 
 
     const textArray = Array.isArray(text) ? text : [text]
@@ -39,7 +40,7 @@ const AnimatedText = ({ text, className, el: Wrapper = 'h1', transitiondelay } :
                                     <motion.span 
                                         className='inline-block' 
                                         variants={defaultAnimations} 
-                                        transition={{ delay: transitiondelay, duration: 1 }}
+                                        transition={{ delay: transitiondelay, duration: transitionduration }}
                                         key={k + 1}
                                     >
                                         {char}

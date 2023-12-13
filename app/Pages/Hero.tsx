@@ -54,7 +54,7 @@ const Hero = () => {
 
     return(
         <section className='relative flex w-full h-screen select-none items-center justify-center'>
-            <div className='z-10 flex flex-col  w-full items-center 2xl:text-[10vw] 2xl:space-y-16 text-offblacktxt uppercase'>
+            <div className='z-10 flex flex-col  w-full text-title items-center 2xl:text-[10vw] 2xl:space-y-16 text-offblacktxt uppercase'>
                 <div className='2xl:py-16'>
                     <AnimatedText className={generalSans.className + ' overflow-visible'} text={`Hey, I'm Eric`} transitiondelay={2}/>
                 </div>

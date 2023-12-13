@@ -97,3 +97,7 @@ a{
 .text-special {
   font-size: clamp(2rem,4vw,3.25rem)
 }
+
+.text-title {
+  font-size: clamp(3rem,14vw,9rem)
+}

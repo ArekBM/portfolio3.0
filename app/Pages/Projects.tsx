@@ -104,7 +104,3 @@ const Projects = ()  => {
     )
 }
 export default Projects
-
-function setMousePosition(arg0: { x: any; y: any }) {
-    throw new Error('Function not implemented.')
-}
