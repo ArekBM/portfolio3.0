@@ -51,7 +51,7 @@ const Projects = ()  => {
     return (
         <section
             id='projects'
-            className='my-[10%]'
+            className='my-[10%] overflow-hidden'
         >
             <motion.div ref={scope} className='cursordotlinks group relative' style={{ left: x, top : y}} >
                 <motion.div ref={arrowScope} style={{ opacity: 0}}>
@@ -60,7 +60,7 @@ const Projects = ()  => {
             </motion.div>
             <div className='section-heading select-none'>
                 <div className='heading flex items-center justify-center space-x-[3%]'>
-                    <AnimatedText className={generalVar.className + ' w-fit font-medium uppercase text-darkgrey text-9xl'} text={'Projects'} transitiondelay={.5} />
+                    <AnimatedText className={generalVar.className + ' w-fit text-5xl xs:text-heading-2 font-medium xl:text-9xl uppercase text-darkgrey'} text={'Projects'} transitiondelay={.5} />
                 </div>
 
             </div>

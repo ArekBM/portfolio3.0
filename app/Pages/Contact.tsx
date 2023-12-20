@@ -55,16 +55,16 @@ const Contact = () => {
         return () => clearInterval(intervalId)
     }, [])    
 
-    const formattedTime = currentTime.toLocaleTimeString()
+    const formattedTime: string = currentTime.toLocaleTimeString()
 
     return (
         <section
             id='contact'
-            className='my-[10%]'
+            className='my-[10%] overflow-hidden'
         >
             <div className='section-heading select-none'>
                 <div className='heading flex items-center justify-center space-x-[3%]'>
-                    <AnimatedText className={generalVar.className + ' w-fit text-9xl sm:text-heading-2 font-medium uppercase text-darkgrey'} text={'CONTACT'} transitiondelay={.5} />
+                    <AnimatedText className={generalVar.className + ' w-fit text-5xl xs:text-heading-2 font-medium xl:text-9xl uppercase text-darkgrey'} text={'CONTACT'} transitiondelay={.5} />
                 </div>
 
             </div>

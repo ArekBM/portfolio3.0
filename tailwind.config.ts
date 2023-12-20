@@ -23,6 +23,10 @@ const config: Config = {
         offblacktxt: '#262626',
         abouttxt: '#d1d1c7',
         stone: '#d9d9d9',
+      },
+      screens: {
+        xs: '420px',
+        xl: '1170px',
       }
     },
   },

@@ -10,12 +10,14 @@ import { useRef, useState, useEffect } from 'react'
 import Skills from './Pages/Skills'
 import Hero from './Pages/Hero'
 import { motion } from 'framer-motion'
+import Head from 'next/head'
+import em from '../public/em.png'
 
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   const section1ref = useRef(null)
-  const section2ref = useRef(null);
+  const section2ref = useRef(null)
   const section3ref = useRef(null)
   const [isInSection, setIsInSection] = useState(false);
   const [ mousePosition, setMousePosition ] = useState({ x: 0, y: 0})
@@ -54,6 +56,10 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
       observer.observe(section2ref.current)
     }
 
+    if (section3ref.current) {
+      observer.observe(section3ref.current)
+    }
+
 
     return () => {
       observer.disconnect();
@@ -67,10 +73,13 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   return (
     <html lang="en">
+      <Head>
+        <link rel='icon' href='../public/em.png' type='image/png' />
+      </Head>
       <body>
-        <div className='cursordot' style={{ left: x, top : y }}>
+        <div className='cursordot xs:hidden' style={{ left: x, top : y }}>
         </div>
-        <div className='flex flex-col h-screen max-h-screen'>
+        <div>
           <div className={`${bgColor} transition-all duration-500 ease-in-out`}>
             <Hero />
             <Nav isInSection={isInSection} />

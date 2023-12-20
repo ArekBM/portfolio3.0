@@ -17,11 +17,11 @@ const Skills = () => {
     return (
         <section
             id='skills'
-            className='min-h-screen w-full px-10 md:px-5 xl:px-20 2xl:px-28'
+            className='min-h-screen w-full px-10 md:px-5 xl:px-20 2xl:px-28 oveflow-hidden'
         >
             <div className='select-none'>
                 <div className='heading flex items-center justify-center space-x-[3%]'>
-                    <AnimatedText className={generalVar.className + ' w-fit font-medium uppercase text-darkgrey text-9xl'} text={'Skills'} transitiondelay={.5} />
+                    <AnimatedText className={generalVar.className + ' w-fit text-5xl xs:text-heading-2 font-medium xl:text-9xl uppercase text-darkgrey'} text={'Skills'} transitiondelay={.5} />
                 </div>
             </div>
             <div className=' mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24'>
