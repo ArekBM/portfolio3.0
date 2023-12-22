@@ -1,8 +1,10 @@
 import localFont from 'next/font/local'
 import AnimatedText from '../(components)/AnimatedText'
 import { useState, useEffect } from 'react'
-import { motion, useAnimate } from 'framer-motion'
+import { motion, useAnimate, useTransform, useScroll  } from 'framer-motion'
 import Arrow from '@mui/icons-material/ArrowOutward';
+import { MouseEventHandler, useRef } from "react";
+
 
 
 const generalSans = localFont({
@@ -17,10 +19,43 @@ const generalVar = localFont({
     src: '../styles/fonts/GeneralSans-Variable.woff2'
 })
 
+
+const Card = ({card } : { card: CardType}) => {
+    return (
+    <a href={card.link} target='_blank'>
+        <div
+            key={card.id}
+            className="group relative h-[450px] w-[450px] overflow-hidden"
+        >
+            <div
+                style={{
+                backgroundImage: `url(${card.url})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                }}
+                className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 group-hover:rounded"
+            />
+            <div className="absolute inset-0 z-10 grid place-content-center">
+                    <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-3xl font-black uppercase text-white backdrop-blur-l">
+                        {card.title}
+                    </p>
+            </div>
+        </div>
+    </a>
+    );
+  };
+  
 const Projects = ()  => {
     const [ mousePosition, setMousePosition ] = useState({ x: 0, y: 0})
     const [ scope, animate ] = useAnimate()
     const [ arrowScope, animateArrow ] = useAnimate()
+
+    const targetRef = useRef<HTMLDivElement | null>(null);
+    const { scrollYProgress } = useScroll({
+      target: targetRef,
+    });
+  
+    const scrollx = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"])
         
 
     const updateMousePosition = (e : any) => {
@@ -51,11 +86,11 @@ const Projects = ()  => {
     return (
         <section
             id='projects'
-            className='my-[10%] overflow-hidden'
+            className='my-[10%] min-h-screen w-full px-10 md:px-5 xl:px-20 2xl:px-28 oveflow-hidden'
         >
             <motion.div ref={scope} className='cursordotlinks group relative' style={{ left: x, top : y}} >
                 <motion.div ref={arrowScope} style={{ opacity: 0}}>
-                    <Arrow className='relative translate-y-10 translate-x-11 opacity: 0' />
+                    <Arrow className='relative translate-y-10 translate-x-11' />
                 </motion.div>
             </motion.div>
             <div className='section-heading select-none'>
@@ -64,9 +99,30 @@ const Projects = ()  => {
                 </div>
 
             </div>
-            <div className='mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12'>
+            <div>
+                <div className="flex h-48 items-center justify-center">
+                    <span className="font-semibold uppercase text-abouttxt">
+                    Scroll down
+                    </span>
+                </div>
+                <section ref={targetRef} className="relative h-[300vh]">
+                    <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+                    <motion.div style={{ x: scrollx }} className="flex gap-4">
+                        {cards.map((card) => {
+                        return <div key={card.id } onMouseEnter={handleHover} onMouseLeave={handleExit}><Card card={card} /></div>;
+                        })}
+                    </motion.div>
+                    </div>
+                </section>
+                <div className="flex h-32 items-center justify-center">
+                    <span className="font-semibold uppercase text-abouttxt">
+                    Scroll down
+                    </span>
+                </div>
+            </div>
+            {/* <div className='mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12'>
                 <div className='col-span-1 md:col-span-12'>
-                   {/* Hero Img */}
+                
                 </div>
                 <div className='col-span-1 pt-0 md:col-span-7 md:pt-16'>
                     <a href='https://ticketme-arekbm.vercel.app/' target='_blank'>
@@ -98,9 +154,51 @@ const Projects = ()  => {
                         <p className={Cabinet.className + ' text-body-2 2xl:text-4xl text-stone'}>Full stack application hosted on AWS with Stripe integration. Also utilizes tRPC and NextAuth.js </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </section>
     )
 }
 export default Projects
+
+
+type CardType = {
+    url: string;
+    title: string;
+    id: number;
+    link: string;
+  };
+  
+  const cards: CardType[] = [
+    {
+        url: "./dalle.png",
+        title: "Imagen",
+        id: 1,
+        link: 'https://main.d2nibnnfhe4wtq.amplifyapp.com/'
+    },
+    {
+        url: "./ticket-me.png",
+        title: "TicketMe",
+        id: 2,
+        link: 'https://ticketme-arekbm.vercel.app/'
+    },
+    {
+        url: './kitchenSink.png',
+        title: 'KitchenSink',
+        id: 3,
+        link: 'https://django-server-production-550b.up.railway.app/'
+    },
+    {
+        url: './ResumeBuilder.png',
+        title: 'ResumeBuilder',
+        id: 4,
+        link: 'http://stupendous-dasik-d8337d.netlify.app/'
+    },
+    {
+        url: "./folder.png",
+        title: "MinesweeperAI",
+        id: 5,
+        link: 'https://emiyake.netlify.app/project'
+    },
+
+  ];

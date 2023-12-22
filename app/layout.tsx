@@ -14,6 +14,7 @@ import Head from 'next/head'
 import em from '../public/em.png'
 
 
+
 export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   const section1ref = useRef(null)
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: 0.1,
     };
 
     const callback = (entries: any[]) => {
@@ -54,10 +55,12 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
 
     if (section2ref.current) {
       observer.observe(section2ref.current)
+      console.log('2')
     }
 
     if (section3ref.current) {
       observer.observe(section3ref.current)
+      console.log('3')
     }
 
 
@@ -77,7 +80,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
         <link rel='icon' href='../public/em.png' type='image/png' />
       </Head>
       <body>
-        <div className='cursordot xs:hidden' style={{ left: x, top : y }}>
+        <div className='cursordot opacity-0 xs:opacity-1 xl:opacity-0' style={{ left: x, top : y }}>
         </div>
         <div>
           <div className={`${bgColor} transition-all duration-500 ease-in-out`}>
