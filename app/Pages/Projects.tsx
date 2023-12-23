@@ -198,7 +198,7 @@ type CardType = {
         url: "./folder.png",
         title: "MinesweeperAI",
         id: 5,
-        link: 'https://emiyake.netlify.app/project'
+        link: 'https://github.com/ArekBM/minesweeperAI'
     },
 
   ];
