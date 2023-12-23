@@ -88,7 +88,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <br/>
-                        <button>
+                        <button className='msgbtn'>
                             <span className='p-2.5 bg-contactbtn rounded-full'>
                                 <span className={Cabinet.className + ' text-offwhitetxt relative inline-block'}>
                                     <span className='relative z-10 group text-[17.6px]'>

@@ -9,6 +9,7 @@ const Cabinet = localFont({
     src: '../styles/fonts/CabinetGrotesk-Regular.woff2'
 })
 
+
 const Nav = ({isInSection} : any) => {
 
     const bgColor = isInSection ? 'bg-offblack' : 'bg-nav'

@@ -19,15 +19,17 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.font-outline-3 {
-  -webkit-text-stroke: 4px #0E0E0C
-}
+
 
 /* .mask{
   position: absolute;
   mask-image: url('/public/dot.svg');
   mask-size: 12px;
 } */
+
+.msgbtn {
+  cursor: none;
+}
 
 .cursordot {
   width: 12px;
@@ -100,4 +102,9 @@ a{
 
 .text-title {
   font-size: clamp(3rem,14vw,9rem)
+}
+
+
+.font-outline-3 {
+  -webkit-text-stroke: 4px #0E0E0C
 }
