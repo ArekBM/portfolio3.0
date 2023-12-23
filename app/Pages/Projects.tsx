@@ -55,7 +55,7 @@ const Projects = ()  => {
       target: targetRef,
     });
   
-    const scrollx = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"])
+    const scrollx = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"])
         
 
     const updateMousePosition = (e : any) => {
