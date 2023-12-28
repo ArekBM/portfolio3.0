@@ -12,6 +12,7 @@ import Hero from './Pages/Hero'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import em from '../public/em.png'
+import { Analytics } from '@vercel/analytics/react'
 
 
 
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
             <Contact />
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   )
