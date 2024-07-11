@@ -77,9 +77,14 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
 
   return (
     <html lang="en">
-      <Head>
-        <link rel='icon' href='../public/em.png' type='image/png' />
-      </Head>
+      <head>
+        <link
+          rel='icon'
+          href='/icon?<generated>'
+          type='image/<generated>'
+          sizes='<generated>'
+        />
+      </head>
       <body>
         <div className='cursordot opacity-0 xs:opacity-1 xl:opacity-0' style={{ left: x, top : y }}>
         </div>
